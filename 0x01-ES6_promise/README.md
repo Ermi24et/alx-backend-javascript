@@ -10,6 +10,8 @@ At the end of this project, you are expected to be able to explain to anyone, `w
 - Throw / Try
 - The await operator
 - How to use an async function
+## Install Jest, Babel, and ESLint as always
+in your project directory, install Jest, Babel and ESList by using the supplied `package.json` and run `npm install`.
 # Response Data Format
 `uploadPhoto` returns a response with the format
 ```
