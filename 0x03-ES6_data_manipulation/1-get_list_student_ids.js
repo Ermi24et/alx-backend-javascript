@@ -1,5 +1,5 @@
 export default function getListStudentIds(stdList) {
-  if (!(stdList.constructor === Array)) {
+  if (!(stdList instanceof Array)) {
     return [];
   }
   const newList = stdList.map((value) => value.id);
