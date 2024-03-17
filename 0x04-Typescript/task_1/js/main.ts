@@ -1,7 +1,7 @@
 interface Teacher {
     readonly firstName: string;
-    lastName: string;
-    readonly fullTimeEmployee: boolean;
+    readonly lastName: string;
+    fullTimeEmployee: boolean;
     yearsOfExprience?: number;
     location: string;
     [key: string]: any;
@@ -11,7 +11,7 @@ interface Directors extends Teacher {
     numberOfReports: number;
 }
 
-interface printTeacherFunction {
+interface printTeacher {
     (firstName: string, lastName: string): string;
 }
 
