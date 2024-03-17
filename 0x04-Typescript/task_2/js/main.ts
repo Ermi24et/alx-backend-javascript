@@ -1,12 +1,12 @@
 interface DirectorInterface {
     workFromHome(): string;
-    gotCoffeeBreak(): string;
+    getCoffeeBreak(): string;
     workDirectorTasks(): string;
 }
 
 interface TeacherInterface {
     workFromHome(): string;
-    gotCoffeeBreak(): string;
+    getCoffeeBreak(): string;
     workTeacherTasks(): string;
 }
 
@@ -15,7 +15,7 @@ class Director implements DirectorInterface {
         return "Working from home";
     }
 
-    gotCoffeeBreak(): string {
+    getCoffeeBreak(): string {
         return "Getting a coffee break";
     }
 
@@ -26,11 +26,11 @@ class Director implements DirectorInterface {
 
 class Teacher implements TeacherInterface {
     workFromHome(): string {
-        return "Working from home";
+        return "Cannot Work from home";
     }
 
-    gotCoffeeBreak(): string {
-        return "Getting a coffee break";
+    getCoffeeBreak(): string {
+        return "Cannot have a break";
     }
 
     workTeacherTasks(): string {
