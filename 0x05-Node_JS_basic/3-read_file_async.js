@@ -1,13 +1,14 @@
 const fs = require('fs');
 
 const countStudents = (path) => new Promise((resolve, reject) => {
-  fs.readFile(path, (error, csvData) => {
+  fs.readFile(path, (error, fileData) => {
     if (error) {
       reject(Error('Cannot load the database'));
     }
-    if (csvData) {
+    if (fileData) {
       const fields = {};
-      let data = csvData.toString().split('\n').filter((element) => element.length > 0);
+      let data = fileData.toString().split('\n');
+      data = data.filter((element) => element.length > 0);
       data.shift();
 
       data.forEach((element) => {
