@@ -22,7 +22,7 @@ async function countStudents(path) {
           }
         });
         Object.keys(fields).forEach((key) => {
-          data = data.concat(`\nNumber of students in ${key}: ${fields[key].length}. ${fields[key].join(', ')}`);
+          data = data.concat(`\nNumber of students in ${key}: ${fields[key].length}. List: ${fields[key].join(', ')}`);
         });
         resolve(data);
       })
