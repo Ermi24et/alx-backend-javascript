@@ -15,7 +15,7 @@ async function countStudents(path) {
 					if (fields[field]) {
 						fields[field].push(name);
 					} else {
-						fields[field][name];
+						fields[field] = [name];
 					}
 				});
 				Object.keys(fields).forEach((key) => {
