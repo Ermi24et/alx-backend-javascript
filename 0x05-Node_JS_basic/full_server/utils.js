@@ -1,5 +1,3 @@
-const e = require('express');
-
 const fs = require('fs').promises;
 
 async function readDatabase(path) {
