@@ -2,7 +2,7 @@ const readDatabase = require('../utils');
 
 class StudentsController {
   static getAllStudents(request, response) {
-    readDatabase(process.arch[2])
+    readDatabase(process.argv[2])
       .then((data) => {
         const res = ['This is the list of our students'];
         Object.keys(data).sort().forEach((key) => {
