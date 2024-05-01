@@ -45,6 +45,6 @@ const app = http.createServer((req, res) => {
 });
 
 app.listen(1245, () => {
-	// text to see
+	// text to see while node running
 });
 module.exports = app;
