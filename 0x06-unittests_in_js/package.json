@@ -1,7 +1,7 @@
 {
   "name": "0x06-unittests_in_js",
   "version": "1.0.0",
-  "description": "alx project about unittests",
+  "description": "unittests",
   "main": "0-calcul.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-jest": "^27.9.0"
+    "eslint-plugin-jest": "^27.9.0",
+    "mocha": "^10.4.0"
   }
 }
