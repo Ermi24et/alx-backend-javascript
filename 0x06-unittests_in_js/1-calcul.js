@@ -7,4 +7,5 @@ function calculateNumber(type, a, b) {
         return "Error"
     return Math.round(a) / Math.round(b)
 }
+
 module.exports = calculateNumber;
