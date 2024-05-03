@@ -1,5 +1,4 @@
 const assert = require('assert').strict;
-const { isTypedArray } = require('util/types');
 const calculateNumber = require('./1-calcul');
 
 describe('calculateNumber', () => {
