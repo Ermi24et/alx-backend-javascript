@@ -1,24 +1,50 @@
 const assert = require('assert');
 const calculateNumber = require('./0-calcul.js');
-const { describe, it } = require('node:test');
 
 describe('calculateNumber', () => {
-  it('it round the first argument', () => {
-    assert.equal(calculateNumber(1.0, 0), 1);
-    assert.equal(calculateNumber(1.3, 0), 1);
-    assert.equal(calculateNumber(1.7, 0), 2);
+  describe('two integers', () => {
+    it('should return 5', () => {
+      assert.equal(calculateNumber(1, 4), 5);
+    });
   });
-  it('it round the second argument', () => {
-    assert.equal(calculateNumber(0, 1.0), 1);
-    assert.equal(calculateNumber(0, 1.3), 1);
-    assert.equal(calculateNumber(0, 1.7), 2);
+  describe('sum while second argument rounded', () => {
+    it('should return 6', () => {
+      assert.equal(calculateNumber(1, 4.7), 6);
+    });
   });
-  it('it should return the right number', () => {
-    assert.equal(calculateNumber(1.3, 0), 1);
-    assert.equal(calculateNumber(0, 1.2), 1);
-    assert.equal(calculateNumber(1.3, 1.3), 2);
-    assert.equal(calculateNumber(1.7, 1.2), 3);
-    assert.equal(calculateNumber(1.3, 1.8), 3);
-    assert.equal(calculateNumber(1.6, 1.8), 4);
+  describe('sum while the first argument rounded', () => {
+    it('it should return 6', () => {
+      assert.equal(calculateNumber(4.7, 1), 6);
+    })
+  });
+  describe('sum while the second argument round floor', () => {
+    it('should return 6', () => {
+      assert.equal(calculateNumber(1, 4.3), 5);
+    });
+  });
+  describe('sum while the first argument round floor', () => {
+    it('should return 6', () => {
+      assert(calculateNumber(4.3, 1), 5);
+    });
+  })
+  describe('sum while two arguments round', () => {
+    it('should return 8', () => {
+      assert.equal(calculateNumber(2.5, 4.7), 8);
+    });
+  });
+  describe('sum while first arg round floor and second round', () => {
+    it('should return 6', () => {
+      assert.equal(calculateNumber(2.2, 3.7), 6);
+    });
+  });
+  describe('sum while the second arg round floor and the first round', () => {
+    it('should return 6', () => {
+      assert.equal(calculateNumber(3.7, 2.2), 6);
+    });
+  });
+  describe('sum while both args round floor', () => {
+    it('should return 4', () => {
+      assert.equal(calculateNumber(2.2, 2.1), 4);
+    });
   });
 });
