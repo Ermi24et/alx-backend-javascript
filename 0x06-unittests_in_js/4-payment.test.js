@@ -13,7 +13,7 @@ describe('stubs', () => {
     sendPaymentRequestToApi(100, 20);
 
     expect(stubU.calledOnceWithExactly('SUM', 100, 20)).to.be.true;
-    expect(spyC.calledOnceWithExactly('The total is: 20')).to.be.true;
+    expect(spyC.calledOnceWithExactly('The total is: 10')).to.be.true;
 
     stubU.restore();
     spyC.restore();
