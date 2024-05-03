@@ -1,13 +1,13 @@
-import { spy } from 'sinon';
+const sinon = require('sinon');
 import { expect } from 'chai';
 
-import sendPaymentRequestToApi from '3-payment';
-import Utils from './utils';
+const sendPaymentRequestToApi = require('./3-payment');
+const Utils = require('./utils');
 
 describe('spies', () => {
     it('equal', () => {
-        const spyU = spy(Utils, 'calculateNumber');
-        const spyC = spy(console, 'log');
+        const spyU = sinon.spy(Utils, 'calculateNumber');
+        const spyC = sinon.spy(console, 'log');
 
         sendPaymentRequestToApi(100, 20);
 
